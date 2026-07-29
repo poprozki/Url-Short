@@ -1,0 +1,17 @@
+[Unit]
+Description=URL Shortener Flask Application
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/shortener
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 /var/www/shortener/app.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/url-shortener/output.log
+StandardError=append:/var/log/url-shortener/error.log
+
+[Install]
+WantedBy=multi-user.target

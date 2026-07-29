@@ -1,0 +1,14 @@
+config.py
+urls.db
+*.db
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+DNS_SETUP.md
+SYSTEMD_SETUP.md
+FIX_GUNICORN.md
